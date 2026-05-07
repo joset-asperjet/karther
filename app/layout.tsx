@@ -6,8 +6,15 @@ import { useState, useEffect } from 'react'
 import { Loader } from '@/components/loader'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -46,7 +53,7 @@ export default function RootLayout({
         <link rel="icon" href="/images/presskit-downloads/snare-wars/joset-digital-presskitt-icon01.png" />
         <link rel="apple-touch-icon" href="/images/presskit-downloads/snare-wars/joset-digital-presskitt-icon01.png" />
       </head>
-      <body className={`font-sans antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
         {isLoading ? <Loader /> : children}
         <Analytics />
       </body>
