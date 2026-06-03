@@ -6,10 +6,26 @@ import { LayoutGrid, Rows, MapPin, Calendar, Clock } from 'lucide-react';
 
 const presentations = [
   {
+    city: 'Medellín',
+    place: 'Moresko Club',
+    date: 'Julio 17, 2026',
+    time: '10:00 PM',
+    image: '/images/latest-presentations/joset-presskit-2026-julio-17-moresko-club.webp',
+    isUpcoming: true,
+  },
+  {
+    city: 'Cali',
+    place: 'Discos Eterna Showcase',
+    date: 'Junio 27, 2026',
+    time: '10:00 PM',
+    image: '/images/latest-presentations/joset-presskit-2026-junio-27-discos-terna-showcase.webp',
+    isUpcoming: true,
+  },
+  {
     city: 'Cali',
     place: 'Sala Kbron',
     date: 'Jun 2026',
-    time: '12:00 PM',
+    time: 'TBD',
     image: '/images/latest-presentations/joset-presskit-2026-jun-2026-sala-kbron.webp',
     isUpcoming: true,
   },
