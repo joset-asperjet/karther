@@ -4,6 +4,15 @@ import { PlayCircle } from 'lucide-react';
 
 const djSets = [
   {
+    title: 'SNARE WARS Radio 002',
+    description: 'Something else that has influenced me is being surrounded by progressive DJs. This reshaped my idea of how track blending and transitions should sound.',
+    duration: '60 min',
+    date: 'June 2026',
+    image: '/images/latest-dj-sets/joset-digital-presskit-latest-dj-sets-snarewars-radio-002.webp',
+    url: 'https://soundcloud.com/joset-audiofiles/snare-wars-001-the-first-of?in=joset-audiofiles/sets/snare-wars-radio',
+    mixcloudUrl: 'https://www.mixcloud.com/joset_asperjet/snare-wars-001-the-first-of-the-year-mixed-by-joset/',
+  },
+  {
     title: 'Sala Kbron Residency',
     description: 'An evening in an intimate setting, with friends; the perfect opportunity to expand musically.',
     duration: '180 min',

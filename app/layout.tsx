@@ -50,8 +50,8 @@ export default function RootLayout({
         <meta property="twitter:image" content="https://snarewarsradio.info/images/joset-presskit-2026-artist-photo.jpg" />
 
         {/* Favicon */}
-        <link rel="icon" href="/images/presskit-downloads/snare-wars/joset-digital-presskitt-icon01.png" />
-        <link rel="apple-touch-icon" href="/images/presskit-downloads/snare-wars/joset-digital-presskitt-icon01.png" />
+        <link rel="icon" href="/icon.svg" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
         {isLoading ? <Loader /> : children}

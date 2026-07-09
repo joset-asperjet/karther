@@ -7,7 +7,7 @@ export function Hero() {
       <BrandsSlider />
 
       <Image
-        src="/images/joset-presskit-2026-artist-photo.jpg"
+        src="/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo23.webp"
         alt="Artist Portrait"
         fill
         className="object-cover"

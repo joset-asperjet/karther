@@ -5,52 +5,48 @@ import Image from 'next/image';
 import { Camera, AlertCircle, X, Download, ChevronDown } from 'lucide-react';
 
 const mainPressGallery = [
+    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo2.jpg", label: "Press Photo 02" },
+    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo1.jpg", label: "Press Photo 01" },
 
-    { src: "/images/presskit-downloads/artist-photos/joset-digital-presskit-2026-artist-photo01.jpg", label: "Press Photo 01" },
-    { src: "/images/presskit-downloads/artist-photos/joset-digital-presskit-2026-artist-photo05.jpg", label: "Press Photo 05" },
-
+    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo3.jpg", label: "Press Photo 03" },
+    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo4.jpg", label: "Press Photo 04" },
+    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo5.jpg", label: "Press Photo 05" },
+    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo6.jpg", label: "Press Photo 06" },
+    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo7.jpg", label: "Press Photo 07" },
+    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo8.jpg", label: "Press Photo 08" },
+    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo9.jpg", label: "Press Photo 09" },
+    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-2026-artist-photo05.jpg", label: "Press Photo 10" },
 ];
 
 const bwGallery = [
-    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo06.jpg", label: "Press Photo 01" },
 
-    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo07.jpg", label: "Press Photo 01" },
-
-    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo08.jpg", label: "Press Photo 01" },
-
-    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo05.jpg", label: "Press Photo 01" },
-
-    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo04.png", label: "Press Photo 01" },
-    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo02.jpg", label: "Press Photo 02" },
-    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo03.jpg", label: "Press Photo 03" },
-    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo01.jpg", label: "Press Photo 04" },
+    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo-hd-download-04.jpg", label: "Performance Photo 04" },
+    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo-hd-download-01.jpg", label: "Performance Photo 01" },
+    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo-hd-download-02.jpg", label: "Performance Photo 02" },
+    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo-hd-download-03.jpg", label: "Performance Photo 03" },
+    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo-hd-download-05.jpg", label: "Performance Photo 05" },
+    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo-hd-download-06.jpg", label: "Performance Photo 06" },
+    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo-hd-download-07.jpg", label: "Performance Photo 07" },
 ];
 
 const logoGallery = [
-    { src: "/images/presskit-downloads/logos/joset-digital-presskitt-logo-platinum.png", label: "Main Logo Platinum" },
-    { src: "/images/presskit-downloads/logos/joset-digital-presskitt-logo-metal.png", label: "Main Logo Metal" },
-    { src: "/images/presskit-downloads/logos/joset-digital-presskitt-logo-80s.png", label: "Main Logo 80s" },
     { src: "/images/presskit-downloads/logos/joset-digital-presskitt-logo-white.png", label: "Main Logo White" },
     { src: "/images/presskit-downloads/logos/joset-digital-presskitt-logo-black.png", label: "Main Logo Black" },
 ];
 
 const snareWarsGallery = [
-    { src: "/images/presskit-downloads/snare-wars/joset-digital-presskitt-icon02.png", label: "Snare Wars Icon 02" },
-    { src: "/images/presskit-downloads/snare-wars/joset-digital-presskitt-icon03.png", label: "Snare Wars Icon 03" },
-
-    { src: "/images/presskit-downloads/snare-wars/joset-digital-presskitt-icon01.png", label: "Snare Wars Icon 01" },
     { src: "/images/presskit-downloads/snare-wars/joset-digital-presskitt-logo-snare-wars-logo-04.png", label: "Snare Wars Logo 04" },
-    { src: "/images/presskit-downloads/snare-wars/joset-digital-presskitt-logo-snare-wars-logo-03.png", label: "Snare Wars Logo 03" },
-    { src: "/images/presskit-downloads/snare-wars/joset-digital-presskitt-logo-snare-wars-logo-02.png", label: "Snare Wars Logo 02" },
-    { src: "/images/presskit-downloads/snare-wars/joset-digital-presskitt-logo-snare-wars-logo-01.png", label: "Snare Wars Logo 01" },
-
+    { src: "/images/presskit-downloads/snare-wars/joset-digital-presskitt-logo-snare-wars-isologo-black.png", label: "Snare Wars Isologo Black" },
+    { src: "/images/presskit-downloads/snare-wars/joset-digital-presskitt-logo-snare-wars-isologo-black-eyes.png", label: "Snare Wars Isologo Black Eyes" },
+    { src: "/images/presskit-downloads/snare-wars/joset-digital-presskitt-logo-snare-wars-isologo-gray.png", label: "Snare Wars Isologo Gray" },
+    { src: "/images/presskit-downloads/snare-wars/joset-digital-presskitt-logo-snare-wars-isologo-gray-eyes.png", label: "Snare Wars Isologo Gray Eyes" },
 ];
 
 const assets = [
     {
         src: mainPressGallery[0].src,
         alt: "Artist Portrait (Default)",
-        label: "Main Press Photos",
+        label: "Editorial Photos",
         isGallery: true,
         galleryType: 'main' as const,
     },

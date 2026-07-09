@@ -8,9 +8,9 @@ const newsItems = [
     {
         title: "Joset x Discos Eterna: Digital Presskit Revolution",
         date: "May 2026",
-        description: "A strategic alliance to empower artists through professional digital presskits, personalized mentorship, and project scaling strategies.",
+        description: "A strategic alliance to empower artists through professional digital presskits, personalized mentorship, and project scaling strategies, proud to feature brand ambassadors like Kamilo Sanclemente and Koleto.",
         tag: "Alliance",
-        detailedContent: "Discos Eterna has partnered with Joset to redefine how artists present themselves to the world. This collaboration combines cutting-edge digital presskit technology with expert consulting and growth plans, ensuring creators have the tools to scale their artistic vision globally.",
+        detailedContent: "Discos Eterna has partnered with Joset to redefine how artists present themselves to the world. This collaboration combines cutting-edge digital presskit technology with expert consulting and growth plans, ensuring creators have the tools to scale their artistic vision globally, proudly backed by brand ambassadors Kamilo Sanclemente and Koleto.",
         image: "/images/latest-news/joset-digital-presskit-2026-joset-and-discos-eterna.webp",
         websiteUrl: "https://discoseterna.info"
     },
@@ -40,13 +40,6 @@ const newsItems = [
         detailedContent: "Driven by a passion for interactive mysteries, I've partnered with WBS Studios Games on 'Poveglia'. This project merges my musical foundations with avant-garde foley design, crafting an immersive auditory landscape that pushes the boundaries of horror gaming.",
         image: "/images/latest-news/joset-digital-presskit-2026-poveglia-videogame.webp",
         steamUrl: "https://store.steampowered.com/app/2260450/Poveglia_The_Island_of_No_Return/?l=spanish"
-    },
-    {
-        title: "Digital Presskit",
-        date: "June 2024",
-        description: "Joset introduces Digital Presskit, a new service designed to bridge the gap between emerging artists and global festival curators.",
-        tag: "Business",
-        detailedContent: "Leveraging my expertise in frontend development, I've engineered a line of interactive presskits that transcend the static PDF. Serving as a premium alternative to Linktree, the platform is already trusted by figures like Kamilo Sanclemente and Alex Morph—the latter describing the aesthetic as 'truly brilliant'."
     },
     {
         title: "Nostalgic Waters: 'Aquatic' Tribute",
