@@ -7,6 +7,19 @@ import { Apple, Music2, Radio } from 'lucide-react';
 
 const tracks = [
   {
+    title: "Ghost In The Shell",
+    artist: "Joset, Juanito State",
+    label: "Discos Eterna",
+    date: "2026",
+    image: "/images/cover-tracks/joset-digital-presskit-ghost-in-the-shell-discos-eterna.webp",
+    audioUrl: "/images/previews-tracks/joset-juanito-state-ghost-in-the-shell",
+    links: {
+      spotify: "https://open.spotify.com/intl-es/track/3LiG7vd0VT702yqIHI8D3O",
+      apple: "https://music.apple.com/us/album/ghost-in-the-shell-radio-edit/6795724513?i=6795724515",
+      deezer: "https://www.deezer.com/en/album/1041636422",
+    },
+  },
+  {
     title: "It's Not True",
     artist: "Juanito State, Joset",
     label: "Clandestina",

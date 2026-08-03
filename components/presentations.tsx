@@ -19,7 +19,6 @@ const presentations = [
     date: 'Julio 25, 2026',
     time: '02:00 PM',
     image: '/images/latest-presentations/joset-presskit-2026-junio-27-discos-terna-showcase.webp',
-    isUpcoming: true,
   },
   {
     city: 'Medellín',
@@ -27,7 +26,7 @@ const presentations = [
     date: 'Julio 17, 2026',
     time: '12:30 AM',
     image: '/images/latest-presentations/joset-presskit-2026-julio-17-moresko-club.webp',
-    isUpcoming: true,
+    isCancelled: true,
   },
   {
     city: 'Cali',
@@ -280,6 +279,13 @@ export function Presentations() {
                   </div>
                 </div>
               )}
+              {presentation.isCancelled && (
+                <div className="absolute top-0 right-0 overflow-hidden rounded-tr rounded-bl z-10">
+                  <div className="bg-red-600 px-2 py-0.5 text-[8px] font-black uppercase tracking-widest text-white">
+                    Rescheduled
+                  </div>
+                </div>
+              )}
               <div className="aspect-[4/5] w-full overflow-hidden rounded">
                 <Image
                   src={presentation.image || '/placeholder.svg'}
@@ -324,6 +330,13 @@ export function Presentations() {
                 <div className="absolute top-0 right-0 overflow-hidden rounded-tr rounded-bl z-10">
                   <div className="bg-accent px-2 py-0.5 text-[8px] font-black uppercase tracking-widest text-background">
                     Upcoming
+                  </div>
+                </div>
+              )}
+              {presentation.isCancelled && (
+                <div className="absolute top-0 right-0 overflow-hidden rounded-tr rounded-bl z-10">
+                  <div className="bg-red-400 px-2 py-0.5 text-[8px] font-black uppercase tracking-widest text-white">
+                    Rescheduled
                   </div>
                 </div>
               )}
