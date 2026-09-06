@@ -7,23 +7,51 @@ import { LayoutGrid, Rows, MapPin, Calendar, Clock } from 'lucide-react';
 const presentations = [
   {
     city: 'Cali',
-    place: 'Sala Kbron Records',
-    date: 'TBD',
+    place: 'SK Records',
+    date: 'November',
     time: 'TBD',
     image: '/images/latest-presentations/joset-presskit-2026-jun-2026-sala-kbron-tbd.webp',
     isUpcoming: true,
+
+  },
+  {
+    city: 'Medellín',
+    place: 'Critical Sounds (Radio)',
+    date: 'November',
+    time: 'TBD',
+    image: '/images/latest-presentations/joset-presskit-2026-noviembre-2026-critical-sounds.webp',
+    isUpcoming: true,
+
+  },
+  {
+    city: 'Cali',
+    place: 'Sucursal Fest 2026',
+    date: 'October',
+    time: 'TBD',
+    image: '/images/latest-presentations/joset-presskit-2026-octubre-2025-sucursal-fest-cali.webp',
+    isUpcoming: true,
+
+  },
+  {
+    city: 'Cali',
+    place: 'SK Records',
+    date: 'August 29, 2026 (Birthday Bash)',
+    time: '12:00am',
+    image: '/images/latest-presentations/joset-presskit-2026-aug-2026-sala-k-records.webp',
+    isUpcoming: false,
+
   },
   {
     city: 'Cali',
     place: 'Discos Eterna Showcase',
-    date: 'Julio 25, 2026',
+    date: 'July 25, 2026',
     time: '02:00 PM',
     image: '/images/latest-presentations/joset-presskit-2026-junio-27-discos-terna-showcase.webp',
   },
   {
     city: 'Medellín',
     place: 'Moresko Club',
-    date: 'Julio 17, 2026',
+    date: 'July 17, 2026',
     time: '12:30 AM',
     image: '/images/latest-presentations/joset-presskit-2026-julio-17-moresko-club.webp',
     isCancelled: true,
@@ -31,14 +59,14 @@ const presentations = [
   {
     city: 'Cali',
     place: 'Sala Kbron',
-    date: 'Junio 13, 2026',
+    date: 'June 13, 2026',
     time: '12:30 AM',
     image: '/images/latest-presentations/joset-presskit-2026-jun-2026-sala-kbron.webp',
   },
   {
     city: 'Cali',
     place: 'Sala Kbron',
-    date: 'Abril 2026',
+    date: 'April 2026',
     time: '12:00 AM',
     image: '/images/latest-presentations/joset-presskit-2026-abril-2026-sala-kbron.webp',
   },
