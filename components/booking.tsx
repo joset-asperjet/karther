@@ -16,10 +16,10 @@ export function Booking() {
       </div>
 
       {/* Booking CTA Card */}
-      <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-xl border border-emerald-500/30 bg-emerald-950/20 px-6 py-6 text-center backdrop-blur-md transition-all duration-300 hover:border-emerald-400/50 hover:shadow-[0_0_30px_rgba(1,255,149,0.15)]">
-        {/* Animated Green Ambient Glow (sweeps left to right) */}
-        <div className="animate-glow-sweep pointer-events-none absolute top-1/2 left-1/2 h-28 w-64 -translate-y-1/2 rounded-full bg-[#01ff95]/20 blur-2xl" />
-        <div className="animate-glow-sweep pointer-events-none absolute top-1/2 left-1/2 h-20 w-44 -translate-y-1/2 rounded-full bg-emerald-400/15 blur-xl [animation-delay:-3s]" />
+      <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-xl border border-red-500/30 bg-red-950/20 px-6 py-6 text-center backdrop-blur-md transition-all duration-300 hover:border-red-400/50 hover:shadow-[0_0_30px_rgba(239,68,68,0.18)]">
+        {/* Animated Red Ambient Glow (sweeps left to right) */}
+        <div className="animate-glow-sweep pointer-events-none absolute top-1/2 left-1/2 h-28 w-64 -translate-y-1/2 rounded-full bg-red-500/20 blur-2xl" />
+        <div className="animate-glow-sweep pointer-events-none absolute top-1/2 left-1/2 h-20 w-44 -translate-y-1/2 rounded-full bg-rose-500/15 blur-xl [animation-delay:-3s]" />
 
         <div className="relative z-10 space-y-1">
           <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
@@ -27,7 +27,7 @@ export function Booking() {
           </p>
           <a
             href="mailto:koletobeatz@hotmail.es?subject=Booking%20Inquiry%20-%20Karther"
-            className="inline-block text-base font-bold text-emerald-400 underline underline-offset-4 transition-colors hover:text-emerald-300"
+            className="inline-block text-base font-bold text-red-400 underline underline-offset-4 transition-colors hover:text-red-300"
           >
             koletobeatz@hotmail.es
           </a>

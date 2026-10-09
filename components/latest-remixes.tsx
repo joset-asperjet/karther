@@ -191,10 +191,10 @@ export function LatestRemixes() {
 
       {/* EP Releases list with background glow */}
       <div className="relative">
-        {/* Blurred green gradient circle shifted to the right */}
+        {/* Blurred red gradient circle shifted to the right */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-12 top-1/2 -translate-y-1/2 h-80 w-80 rounded-full bg-gradient-to-bl from-emerald-400/30 via-green-500/20 to-teal-400/10 blur-3xl opacity-80"
+          className="pointer-events-none absolute -right-12 top-1/2 -translate-y-1/2 h-80 w-80 rounded-full bg-gradient-to-bl from-red-500/30 via-rose-600/20 to-red-900/10 blur-3xl opacity-80"
         />
 
         <div className="relative z-10 space-y-4">
