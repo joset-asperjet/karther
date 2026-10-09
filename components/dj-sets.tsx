@@ -1,42 +1,56 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { PlayCircle } from 'lucide-react';
+import { PlayCircle, Youtube } from 'lucide-react';
 
-const djSets = [
+interface DJSet {
+  title: string;
+  description: string;
+  duration: string;
+  date: string;
+  image: string;
+  videoUrl?: string;
+  url: string;
+  mixcloudUrl?: string;
+  youtubeUrl?: string;
+  isYoutubeOnly?: boolean;
+}
+
+const djSets: DJSet[] = [
   {
-    title: 'SNARE WARS Radio 002',
-    description: 'Something else that has influenced me is being surrounded by progressive DJs. This reshaped my idea of how track blending and transitions should sound.',
+    title: 'KARTHER @ GORDO x Booth & Alib',
+    description: 'Debut set live in Cali alongside Gordo at Centro de Eventos Valle del Pacífico.',
     duration: '60 min',
-    date: 'June 2026',
-    image: '/images/latest-dj-sets/joset-digital-presskit-latest-dj-sets-snarewars-radio-002.webp',
-    url: 'https://soundcloud.com/joset-audiofiles/snare-wars-001-the-first-of?in=joset-audiofiles/sets/snare-wars-radio',
-    mixcloudUrl: 'https://www.mixcloud.com/joset_asperjet/snare-wars-001-the-first-of-the-year-mixed-by-joset/',
+    date: 'October 15, 2023',
+    image: '/multimedia-karther/music/tracks-covers/dj-sets/karther-set-debut-gordo.jpg',
+    url: 'https://soundcloud.com/kartherdj/karther-set-debut-cali-gordo-x-booth-alib-15-10-2023?si=267bc6bcd682401393788e9bc53b667d&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
   },
   {
-    title: 'Sala Kbron Residency',
-    description: 'An evening in an intimate setting, with friends; the perfect opportunity to expand musically.',
-    duration: '180 min',
-    date: 'April 2026',
-    image: '/images/latest-dj-sets/joset-digital-presskit-latest-dj-sets-sk02.webp',
-    url: 'https://soundcloud.com/joset-audiofiles/joset-sala-kbron-apr-18-2026?in=joset-audiofiles/sets/dj-sets',
-    mixcloudUrl: 'https://www.mixcloud.com/joset_asperjet/joset-sala-kbron-apr-18-2026/',
-  },
-  {
-    title: 'SNARE WARS 2025 Year Mix',
-    description: '2025 Year Mix Mixed by Joset',
-    duration: '180 min',
-    date: 'December 2025',
-    image: '/images/latest-dj-sets/joset-digital-presskit-latest-dj-sets-1.jpg',
-    url: 'https://soundcloud.com/joset-audiofiles/snare-wars-2025-year-mix-mixed-by-joset',
-    mixcloudUrl: 'https://www.mixcloud.com/joset_asperjet/snare-wars-2025-year-mix-mixed-by-joset/',
-  },
-  {
-    title: 'Sala Kbron Residency',
-    description: 'The last hour of one of my most iconic sets at my residency club, Sala Kbron.',
+    title: 'NebulozzaRadio #026 (Special Guest)',
+    description: 'Special guest session curated for Nebulozza Records Radio Show.',
     duration: '60 min',
-    date: 'October 2025',
-    image: '/images/latest-dj-sets/joset-digital-presskit-latest-dj-sets.jpg',
-    url: 'https://soundcloud.com/joset-audiofiles/joset-sala-kbron-oct-04-2025?in=joset-audiofiles/sets/dj-sets',
+    date: '2025',
+    image: '/multimedia-karther/music/tracks-covers/dj-sets/karther-nebulosa.png',
+    url: 'https://soundcloud.com/nebulozzarecords/nebulozza-radio-show-025',
+  },
+  {
+    title: 'Epifania Radio Show 02',
+    description: 'Exclusive guest mix for Epifania Radio session.',
+    duration: '60 min',
+    date: '2025',
+    image: '/multimedia-karther/music/tracks-covers/dj-sets/karther-epifania.jpg',
+    url: 'https://www.mixcloud.com/Karther/sesi%C3%B3n-epifania-radio-show/',
+    mixcloudUrl: 'https://www.mixcloud.com/Karther/sesi%C3%B3n-epifania-radio-show/',
+  },
+  {
+    title: 'Future Madness',
+    description: 'Exclusive video performance set for Future Madness channel.',
+    duration: '60 min',
+    date: '2026',
+    image: '/multimedia-karther/music/tracks-covers/dj-sets/karther-future-madness.png',
+    videoUrl: '/multimedia-karther/music/tracks-covers/dj-sets/karther-future-madness.mp4',
+    url: 'https://www.youtube.com/watch?v=c4jtLT_ZuTc',
+    youtubeUrl: 'https://www.youtube.com/watch?v=c4jtLT_ZuTc',
+    isYoutubeOnly: true,
   },
 ];
 
@@ -53,83 +67,141 @@ export function DJSets() {
       </div>
 
       <div className="space-y-4">
-        {djSets.map((set, idx) => (
-          <div
-            key={idx}
-            className="group relative overflow-hidden rounded border border-white/10 bg-white/5 transition-all duration-200 hover:border-accent/50 hover:bg-white/10"
-          >
-            <Link
-              href={set.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
+        {djSets.map((set, idx) => {
+          const isVideo = Boolean(set.videoUrl);
+
+          return (
+            <div
+              key={idx}
+              className={`group relative overflow-hidden rounded border border-white/10 bg-white/5 transition-all duration-200 hover:border-accent/50 hover:bg-white/10 p-4 ${
+                isVideo
+                  ? 'flex flex-col gap-4'
+                  : 'flex flex-col sm:flex-row gap-4 items-center'
+              }`}
             >
-              <div className="relative h-32 w-full overflow-hidden">
-                <Image
-                  src={set.image || "/placeholder.svg"}
-                  alt={set.title}
-                  width={328}
-                  height={128}
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-
-                <div className="absolute inset-0 flex items-center justify-center bg-black/40 transition-all duration-200 group-hover:bg-black/60">
-                  <PlayCircle className="h-8 w-8 text-white transition-transform duration-200 group-hover:scale-110" />
-                </div>
-              </div>
-
-              <div className="p-3">
-                <h3 className="text-sm font-semibold text-foreground">
-                  {set.title}
-                </h3>
-                <p className="mt-0.5 text-[11px] leading-snug text-muted-foreground/80 line-clamp-1">
-                  {set.description}
-                </p>
-              </div>
-            </Link>
-
-            <div className="mt-2 flex items-center justify-between border-t border-white/5 bg-black/50 px-3 py-2">
-              <div className="flex items-center gap-3">
-                <p className="text-[10px] font-medium text-accent">{set.duration}</p>
-                <div className="flex items-center gap-2 border-l border-white/10 pl-3">
+              {/* Media Container: Horizontal widescreen 16:9 si tiene video, o aspecto cuadrado para los demás */}
+              {isVideo ? (
+                <div className="relative aspect-video w-full overflow-hidden rounded border border-white/10 bg-black/60">
+                  <video
+                    src={set.videoUrl}
+                    poster={set.image}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    controls={false}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 pointer-events-none"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
                   <Link
                     href={set.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="opacity-40 hover:opacity-100 transition-opacity"
-                    title="Listen on SoundCloud"
+                    className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-all duration-200 group-hover:opacity-100 hover:bg-black/50"
+                    title="Watch full set on YouTube"
                   >
-                    <Image
-                      src="/images/social-media-logos/joset-presskit-2026-icon-soundcloud.png"
-                      alt="SoundCloud"
-                      width={14}
-                      height={14}
-                      className="brightness-0 invert h-3.5 w-auto object-contain"
-                    />
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 transition-transform duration-200 group-hover:scale-110">
+                      <Youtube className="h-6 w-6 text-white drop-shadow-md" fill="white" />
+                    </div>
                   </Link>
-                  {set.mixcloudUrl && (
-                    <Link
-                      href={set.mixcloudUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="opacity-40 hover:opacity-100 transition-opacity"
-                      title="Listen on Mixcloud"
-                    >
-                      <Image
-                        src="/images/social-media-logos/joset-presskit-2026-icon-mixcloud.png"
-                        alt="Mixcloud"
-                        width={14}
-                        height={14}
-                        className="brightness-0 invert h-3.5 w-auto object-contain"
-                      />
-                    </Link>
-                  )}
+                  <span className="absolute bottom-2 left-2 text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded bg-black/75 text-accent border border-white/10 pointer-events-none">
+                    Live Video Set
+                  </span>
+                </div>
+              ) : (
+                <div className="relative aspect-square w-24 sm:w-28 flex-shrink-0 overflow-hidden rounded border border-white/10">
+                  <Image
+                    src={set.image || "/placeholder.svg"}
+                    alt={set.title}
+                    width={112}
+                    height={112}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <Link
+                    href={set.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute inset-0 flex items-center justify-center bg-black/40 transition-all duration-200 group-hover:bg-black/60"
+                  >
+                    <PlayCircle className="h-8 w-8 text-white transition-transform duration-200 group-hover:scale-110" />
+                  </Link>
+                </div>
+              )}
+
+              {/* Contenido e Información */}
+              <div className="flex flex-1 flex-col justify-between w-full min-w-0">
+                <div>
+                  <h3 className="text-sm font-semibold text-foreground truncate">
+                    {set.title}
+                  </h3>
+                  <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground/80 line-clamp-2">
+                    {set.description}
+                  </p>
+                </div>
+
+                {/* Pie con duración, íconos de plataformas y fecha */}
+                <div className="mt-3 flex items-center justify-between border-t border-white/5 pt-2">
+                  <div className="flex items-center gap-3">
+                    <p className="text-[10px] font-medium text-accent">{set.duration}</p>
+                    <div className="flex items-center gap-2 border-l border-white/10 pl-3">
+                      {/* Si es sólo YouTube */}
+                      {set.youtubeUrl && (
+                        <Link
+                          href={set.youtubeUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="opacity-60 hover:opacity-100 transition-opacity text-red-500 hover:scale-110"
+                          title="Watch on YouTube"
+                        >
+                          <Youtube className="h-4 w-4" />
+                        </Link>
+                      )}
+
+                      {/* Si tiene SoundCloud */}
+                      {!set.isYoutubeOnly && set.url && !set.url.includes('mixcloud.com') && (
+                        <Link
+                          href={set.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="opacity-40 hover:opacity-100 transition-opacity"
+                          title="Listen on SoundCloud"
+                        >
+                          <Image
+                            src="/images/social-media-logos/joset-presskit-2026-icon-soundcloud.png"
+                            alt="SoundCloud"
+                            width={14}
+                            height={14}
+                            className="brightness-0 invert h-3.5 w-auto object-contain"
+                          />
+                        </Link>
+                      )}
+
+                      {/* Si tiene Mixcloud */}
+                      {set.mixcloudUrl && (
+                        <Link
+                          href={set.mixcloudUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="opacity-40 hover:opacity-100 transition-opacity"
+                          title="Listen on Mixcloud"
+                        >
+                          <Image
+                            src="/images/social-media-logos/joset-presskit-2026-icon-mixcloud.png"
+                            alt="Mixcloud"
+                            width={14}
+                            height={14}
+                            className="brightness-0 invert h-3.5 w-auto object-contain"
+                          />
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                  <p className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground/60">{set.date}</p>
                 </div>
               </div>
-              <p className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground/60">{set.date}</p>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

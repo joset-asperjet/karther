@@ -4,42 +4,92 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { Camera, AlertCircle, X, Download, ChevronDown } from 'lucide-react';
 
-const mainPressGallery = [
-    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo2.jpg", label: "Press Photo 02" },
-    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo1.jpg", label: "Press Photo 01" },
+interface GalleryItem {
+    src: string;
+    downloadUrl?: string;
+    label: string;
+}
 
-    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo3.jpg", label: "Press Photo 03" },
-    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo4.jpg", label: "Press Photo 04" },
-    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo5.jpg", label: "Press Photo 05" },
-    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo6.jpg", label: "Press Photo 06" },
-    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo7.jpg", label: "Press Photo 07" },
-    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo8.jpg", label: "Press Photo 08" },
-    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-artist-editorial-photo9.jpg", label: "Press Photo 09" },
-    { src: "/images/presskit-downloads/artist-editorial-photos/joset-digital-presskit-2026-artist-photo05.jpg", label: "Press Photo 10" },
+const mainPressGallery: GalleryItem[] = [
+    {
+        src: "/multimedia-karther/photos/editorial/karther-presskit-photo-01lq.webp",
+        downloadUrl: "/multimedia-karther/photos/editorial/karther-presskit-photo-01hq.jpg",
+        label: "Editorial Photo 01",
+    },
+    {
+        src: "/multimedia-karther/photos/editorial/karther-presskit-photo-02lq.webp",
+        downloadUrl: "/multimedia-karther/photos/editorial/karther-presskit-photo-02hq.jpg",
+        label: "Editorial Photo 02",
+    },
+    {
+        src: "/multimedia-karther/photos/editorial/karther-presskit-photo-03lq.webp",
+        downloadUrl: "/multimedia-karther/photos/editorial/karther-presskit-photo-03hq.jpg",
+        label: "Editorial Photo 03",
+    },
+    {
+        src: "/multimedia-karther/photos/editorial/karther-presskit-photo-04lq.webp",
+        downloadUrl: "/multimedia-karther/photos/editorial/karther-presskit-photo-04hq.jpg",
+        label: "Editorial Photo 04",
+    },
+    {
+        src: "/multimedia-karther/photos/editorial/karther-presskit-photo-05lq.webp",
+        downloadUrl: "/multimedia-karther/photos/editorial/karther-presskit-photo-05hq.jpg",
+        label: "Editorial Photo 05",
+    },
+    {
+        src: "/multimedia-karther/photos/editorial/karther-presskit-photo-07lq.webp",
+        downloadUrl: "/multimedia-karther/photos/editorial/karther-presskit-photo-07hq.jpg",
+        label: "Editorial Photo 07",
+    },
+    {
+        src: "/multimedia-karther/photos/editorial/karther-presskit-photo-08lq.webp",
+        downloadUrl: "/multimedia-karther/photos/editorial/karther-presskit-photo-08hq.jpg",
+        label: "Editorial Photo 08",
+    },
+    {
+        src: "/multimedia-karther/photos/editorial/karther-presskit-photo-09lq.webp",
+        downloadUrl: "/multimedia-karther/photos/editorial/karther-presskit-photo-09hq.jpg",
+        label: "Editorial Photo 09",
+    },
 ];
 
-const bwGallery = [
-
-    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo-hd-download-04.jpg", label: "Performance Photo 04" },
-    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo-hd-download-01.jpg", label: "Performance Photo 01" },
-    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo-hd-download-02.jpg", label: "Performance Photo 02" },
-    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo-hd-download-03.jpg", label: "Performance Photo 03" },
-    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo-hd-download-05.jpg", label: "Performance Photo 05" },
-    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo-hd-download-06.jpg", label: "Performance Photo 06" },
-    { src: "/images/presskit-downloads/performance-photos/joset-digital-presskit-2026-performance-photo-hd-download-07.jpg", label: "Performance Photo 07" },
+const bwGallery: GalleryItem[] = [
+    {
+        src: "/multimedia-karther/photos/performance/karther-presskit-photo-performance-02lq.webp",
+        downloadUrl: "/multimedia-karther/photos/performance/karther-presskit-photo-performance-02hq.jpg",
+        label: "Performance Photo 01",
+    },
+    {
+        src: "/multimedia-karther/photos/performance/karther-presskit-photo-lq10.webp",
+        downloadUrl: "/multimedia-karther/photos/performance/karther-presskit-photo-10hq.png",
+        label: "Performance Photo 02",
+    },
 ];
 
-const logoGallery = [
-    { src: "/images/presskit-downloads/logos/joset-digital-presskitt-logo-white.png", label: "Main Logo White" },
-    { src: "/images/presskit-downloads/logos/joset-digital-presskitt-logo-black.png", label: "Main Logo Black" },
+const logoGallery: GalleryItem[] = [
+    {
+        src: "/multimedia-karther/logo/logo-karther-white-letters.png",
+        downloadUrl: "/multimedia-karther/logo/logo-karther-white-letters.png",
+        label: "Karther Logo White",
+    },
+    {
+        src: "/multimedia-karther/logo/logo-karther-black-letters.png",
+        downloadUrl: "/multimedia-karther/logo/logo-karther-black-letters.png",
+        label: "Karther Logo Black",
+    },
 ];
 
-const snareWarsGallery = [
-    { src: "/images/presskit-downloads/snare-wars/joset-digital-presskitt-logo-snare-wars-logo-04.png", label: "Snare Wars Logo 04" },
-    { src: "/images/presskit-downloads/snare-wars/joset-digital-presskitt-logo-snare-wars-isologo-black.png", label: "Snare Wars Isologo Black" },
-    { src: "/images/presskit-downloads/snare-wars/joset-digital-presskitt-logo-snare-wars-isologo-black-eyes.png", label: "Snare Wars Isologo Black Eyes" },
-    { src: "/images/presskit-downloads/snare-wars/joset-digital-presskitt-logo-snare-wars-isologo-gray.png", label: "Snare Wars Isologo Gray" },
-    { src: "/images/presskit-downloads/snare-wars/joset-digital-presskitt-logo-snare-wars-isologo-gray-eyes.png", label: "Snare Wars Isologo Gray Eyes" },
+const agencyGallery: GalleryItem[] = [
+    {
+        src: "/multimedia-karther/logo/logo-booth.png",
+        downloadUrl: "/multimedia-karther/logo/logo-booth.png",
+        label: "Booth Agency Logo",
+    },
+    {
+        src: "/multimedia-karther/logo/logo-dance-different.png",
+        downloadUrl: "/multimedia-karther/logo/logo-dance-different.png",
+        label: "Dance Different Logo",
+    },
 ];
 
 const assets = [
@@ -59,31 +109,31 @@ const assets = [
     },
     {
         src: logoGallery[0].src,
-        alt: "Joset Logo",
+        alt: "Karther Logo",
         label: "Primary Logo",
         isGallery: true,
         galleryType: 'logo' as const,
         isLogo: true,
     },
     {
-        src: snareWarsGallery[0].src,
-        alt: "Snare Wars Assets",
-        label: "Snare Wars",
+        src: agencyGallery[0].src,
+        alt: "Agency Logo Assets",
+        label: "Agency Logo",
         isGallery: true,
-        galleryType: 'snare' as const,
+        galleryType: 'agency' as const,
         isLogo: true,
     },
 ];
 
 export function PhotographyBranding() {
-    const [activeGallery, setActiveGallery] = useState<'main' | 'bw' | 'logo' | 'snare' | null>(null);
+    const [activeGallery, setActiveGallery] = useState<'main' | 'bw' | 'logo' | 'agency' | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const galleries = {
         main: mainPressGallery,
         bw: bwGallery,
         logo: logoGallery,
-        snare: snareWarsGallery,
+        agency: agencyGallery,
     };
 
     const currentGallery = activeGallery ? galleries[activeGallery] : [];
@@ -202,12 +252,12 @@ export function PhotographyBranding() {
                         <div className="z-10 flex w-full items-center justify-between md:mb-4">
                             <div>
                                 <h3 className="text-xs font-bold uppercase tracking-widest text-foreground">
-                                    {activeGallery === 'bw' ? 'LIVE ' : (activeGallery === 'logo' || activeGallery === 'snare') ? 'BRANDING ' : ''}{currentGallery[currentIndex].label}
+                                    {activeGallery === 'bw' ? 'LIVE ' : (activeGallery === 'logo' || activeGallery === 'agency') ? 'BRANDING ' : ''}{currentGallery[currentIndex].label}
                                 </h3>
-                                <p className="text-[10px] text-muted-foreground uppercase mt-1 tracking-tighter">{(activeGallery === 'logo' || activeGallery === 'snare') ? 'Logo Assets 2026' : 'Photography Collection 2026'}</p>
+                                <p className="text-[10px] text-muted-foreground uppercase mt-1 tracking-tighter">{(activeGallery === 'logo' || activeGallery === 'agency') ? 'Logo Assets 2026' : 'Photography Collection 2026'}</p>
                             </div>
                             <a
-                                href={`${currentGallery[currentIndex].src}`}
+                                href={`${currentGallery[currentIndex].downloadUrl || currentGallery[currentIndex].src}`}
                                 download
                                 className="flex items-center gap-2 rounded-full bg-accent px-6 py-2.5 text-[10px] font-bold uppercase tracking-widest text-background transition-all hover:scale-105 active:scale-95 shadow-lg shadow-accent/20"
                             >
@@ -239,7 +289,7 @@ export function PhotographyBranding() {
                                     src={currentGallery[currentIndex].src}
                                     alt={currentGallery[currentIndex].label}
                                     fill
-                                    className={`${(activeGallery === 'logo' || activeGallery === 'snare') ? 'object-contain p-12' : 'object-contain'} select-none`}
+                                    className={`${(activeGallery === 'logo' || activeGallery === 'agency') ? 'object-contain p-12' : 'object-contain'} select-none`}
                                     priority
                                 />
                             </div>
@@ -257,7 +307,7 @@ export function PhotographyBranding() {
                                         src={img.src}
                                         alt={img.label}
                                         fill
-                                        className={`${(activeGallery === 'logo' || activeGallery === 'snare') ? 'object-contain p-2' : 'object-cover'}`}
+                                        className={`${(activeGallery === 'logo' || activeGallery === 'agency') ? 'object-contain p-2' : 'object-cover'}`}
                                     />
                                 </button>
                             ))}
@@ -266,52 +316,18 @@ export function PhotographyBranding() {
                 </div>
             )}
 
-            {/* Branding Manuals Downloads */}
-            <div className="mt-12 flex gap-3">
-                <a
-                    href="https://drive.google.com/drive/folders/1woa6q2pYZG3PxBNAOYMrmyhWM24Ny4mB?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-1 items-center gap-4 border border-white/5 bg-white/5 p-4 rounded transition-all hover:border-accent/40 hover:bg-white/10 group/manual shadow-2xl backdrop-blur-sm"
-                >
-                    <div className="bg-accent p-2 rounded-sm text-background shadow-lg shadow-accent/20 transition-transform group-hover/manual:scale-110">
-                        <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current">
-                            <path d="M8.33 2.5h7.33l6.5 11.25-3.66 6.34H5.5L1.83 13.75 8.33 2.5zM9.5 4.5l-4.9 8.5h9.8L9.5 4.5zm-5.48 9.5l3.15 5.5h6.3l-3.15-5.5h-6.3zm12.3 0l3.15 5.5h-6.3l3.15-5.5h3.15z" />
-                        </svg>
-                    </div>
-                    <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-foreground/80 leading-tight text-left">
-                        Joset Branding<br />Manual
-                    </span>
-                </a>
-                <a
-                    href="https://drive.google.com/drive/folders/1cWu4RLQgthCfES59UVp_ESxdikFgmLyA?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-1 items-center gap-4 border border-white/5 bg-white/5 p-4 rounded transition-all hover:border-accent/40 hover:bg-white/10 group/manual shadow-2xl backdrop-blur-sm"
-                >
-                    <div className="bg-accent p-2 rounded-sm text-background shadow-lg shadow-accent/20 transition-transform group-hover/manual:scale-110">
-                        <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current">
-                            <path d="M8.33 2.5h7.33l6.5 11.25-3.66 6.34H5.5L1.83 13.75 8.33 2.5zM9.5 4.5l-4.9 8.5h9.8L9.5 4.5zm-5.48 9.5l3.15 5.5h6.3l-3.15-5.5h-6.3zm12.3 0l3.15 5.5h-6.3l3.15-5.5h3.15z" />
-                        </svg>
-                    </div>
-                    <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-foreground/80 leading-tight text-left">
-                        Snare Wars Brand<br />Manual
-                    </span>
-                </a>
-            </div>
-
             <div className="mt-8 rounded border border-accent/20 bg-accent/5 p-4 flex gap-4 items-start">
                 <AlertCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                 <div className="flex flex-col gap-0.5">
                     <p className="text-xs leading-relaxed text-muted-foreground italic">
-                        Before publishing any event flyer, specific graphic requirements must be met and approved by me.
+                        Before publishing any event flyer, specific graphic requirements must be met and approved by me or my creative team.
                     </p>
                     <div className="mt-2 flex flex-col gap-1 border-t border-accent/10 pt-2">
                         <p className="text-[9px] uppercase tracking-widest text-muted-foreground/60 flex items-center gap-1.5">
-                            <span className="text-[10px]">©</span> Joset Logotype by Type Sailor
+                            <span className="text-[10px]">©</span> Booth Logotype by Booth
                         </p>
                         <p className="text-[9px] uppercase tracking-widest text-muted-foreground/60 flex items-center gap-1.5">
-                            <span className="text-[10px]">©</span> SNARE WARS Graphic Design by Steven Delgado
+                            <span className="text-[10px]">©</span> #DanceDifferent Design by Booth
                         </p>
                     </div>
                 </div>

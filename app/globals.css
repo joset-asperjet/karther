@@ -141,3 +141,19 @@
 main {
   @apply max-w-md mx-auto overflow-x-hidden;
 }
+
+@keyframes sweep-glow {
+  0% {
+    transform: translate(-80%, -50%);
+  }
+  50% {
+    transform: translate(80%, -50%);
+  }
+  100% {
+    transform: translate(-80%, -50%);
+  }
+}
+
+.animate-glow-sweep {
+  animation: sweep-glow 6s ease-in-out infinite;
+}

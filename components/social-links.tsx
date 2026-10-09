@@ -6,32 +6,32 @@ import Image from 'next/image';
 const socials = [
   {
     name: 'SoundCloud',
-    url: 'https://soundcloud.com/joset-audiofiles',
+    url: 'https://soundcloud.com/kartherdj',
     logo: '/images/social-media-logos/joset-presskit-2026-icon-soundcloud.png',
   },
   {
     name: 'Spotify',
-    url: 'https://open.spotify.com/intl-es/artist/7azNr93FC2YfzzExpNI1Fp?si=zgvN_XfgQxymsru6pstVKw&nd=1&dlsi=78b9a8679ae145cc',
+    url: 'https://open.spotify.com/intl-es/artist/4B2VGlbxu6tHtRRKeEwPJR?si=in3y-8fERw2bj5iwi4-mvw&nd=1&dlsi=12abbeb50bc94482',
     logo: '/images/social-media-logos/joset-presskit-2026-icon-spotify.png',
   },
   {
     name: 'Bandcamp',
-    url: 'https://joset.bandcamp.com/',
+    url: 'https://karther.bandcamp.com/',
     logo: '/images/social-media-logos/joset-presskit-2026-icon-bandcamp.png',
   },
   {
     name: 'Instagram',
-    url: 'https://www.instagram.com/joset_asperjet/',
+    url: 'https://www.instagram.com/kartherdj/',
     logo: '/images/social-media-logos/joset-presskit-2026-icon-instagram.png',
   },
   {
-    name: 'Resident Advisor',
-    url: 'https://es.ra.co/dj/joset',
+    name: 'Apple Music',
+    url: 'https://music.apple.com/us/artist/karther/1581012058',
     logo: '/images/social-media-logos/joset-presskit-2026-icon-resident-advisor.png',
   },
   {
     name: 'Beatport',
-    url: 'https://www.beatport.com/es/artist/joset/915614',
+    url: 'https://www.beatport.com/es/artist/karther/1005477',
     logo: '/images/social-media-logos/joset-presskit-2026-icon-beatport.png',
   },
 ];

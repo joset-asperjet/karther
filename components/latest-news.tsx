@@ -6,56 +6,49 @@ import Image from 'next/image';
 
 const newsItems = [
     {
-        title: "Joset x Discos Eterna: Digital Presskit Revolution",
-        date: "May 2026",
-        description: "A strategic alliance to empower artists through professional digital presskits, personalized mentorship, and project scaling strategies, proud to feature brand ambassadors like Kamilo Sanclemente and Koleto.",
-        tag: "Alliance",
-        detailedContent: "Discos Eterna has partnered with Joset to redefine how artists present themselves to the world. This collaboration combines cutting-edge digital presskit technology with expert consulting and growth plans, ensuring creators have the tools to scale their artistic vision globally, proudly backed by brand ambassadors Kamilo Sanclemente and Koleto.",
-        image: "/images/latest-news/joset-digital-presskit-2026-joset-and-discos-eterna.webp",
-        websiteUrl: "https://discoseterna.info"
+        title: "Karther Nominated for Breakthrough Producer of the Year at CDA 2025",
+        date: "2025",
+        description: "Recognition of his musical trajectory with a nomination for Breakthrough Producer of the Year at the prestigious CDA 2025 Awards.",
+        tag: "Awards",
+        detailedContent: "Karther received a nomination for Breakthrough Producer of the Year at the prestigious CDA 2025 Awards, recognizing his exponential growth within the industry. This milestone marks a significant step in his career, cementing his signature sound in the national scene.",
+        image: "/multimedia-karther/latest-news/premios cda.webp"
     },
     {
-        title: "SNARE WARS Radio Premiere",
-        date: "22 December 2025",
-        description: "Launching a new era in sonic curation: SNARE WARS is a dedicated radio show celebrating the most aggressive and powerful snares in the electronic underground.",
-        tag: "Radio",
-        detailedContent: "SNARE WARS was born from a desire to curate electronic gems often overlooked for their eccentricities, focusing on the intricate architecture of the snare. This project extends into a monthly Spotify playlist curation, ensuring these 80s-inspired, high-end rhythmic textures are accessible across all digital platforms.",
-        image: "/images/latest-news/joset-digital-presskit-2026-snare-wars-radio-show.webp",
-        soundcloudUrl: "https://soundcloud.com/joset-audiofiles/snare-wars-2025-year-mix-mixed-by-joset"
+        title: "Sonic Expansion: New Collaborations with Víctor Vergara",
+        date: "Current",
+        description: "Joining forces with emerging and established talents to push his music into new horizons.",
+        tag: "Collab",
+        detailedContent: "Karther has collaborated with artists such as Víctor Vergara and has an upcoming release alongside Jonathan Jaramillo. These creative synergies continue to expand the reach of his music, enriching his sonic proposition with every new release.",
+        soundcloudUrl: "https://soundcloud.com/kartherdj/victor-vergara-karther-1",
+        ctaText: "Listen on SoundCloud",
+        image: "/multimedia-karther/latest-news/Sonic Expansion New Collaborations with Víctor Vergara.jpg"
     },
     {
-        title: "Sala Kbron Residency Announcement",
-        date: "January 2025",
-        description: "Joset joins the elite roster at Sala Kbron, one of Latin America's premier underground clubs, establishing a permanent home for his signature sound.",
-        tag: "Residency",
-        detailedContent: "The residency at Sala Kbron marks a significant milestone. Known as a pinnacle of the Colombian electronic scene and a top-tier venue in LATAM, the club provides the perfect atmospheric backdrop for Joset's curated blend of Indie Dance, Dark Disco, and Italo Body Music. This partnership delivers immersive sonic journeys in one of the region's most iconic dancefloors.",
-        image: "/images/latest-news/joset-digital-presskit-news-sala-kbron-residency.jpg",
-        websiteUrl: "https://www.instagram.com/salakbron/"
+        title: "Sharing the Stage with International Heavyweights",
+        date: "2023 - 2024",
+        description: "Karther delivered a dynamic warm-up set in a B2B format with Koleto, setting the tone for global figures.",
+        tag: "Live",
+        detailedContent: "Karther delivered dynamic warm-up sets for renowned artists like Classmatic and Rafa Barrios, sharing the stage with electronic music royalty. He also performed a high-impact B2B session alongside Koleto, while his presentation at Waff's party added an invaluable experience to his artistic trajectory."
     },
     {
-        title: "Ghostly Sounds for 'Poveglia'",
-        date: "11 November 2024",
-        description: "Collaborating with WBS Studios as Music Producer and Foley Artist for 'Poveglia', an upcoming horror game inspired by the cursed Italian island.",
-        tag: "Gamer",
-        detailedContent: "Driven by a passion for interactive mysteries, I've partnered with WBS Studios Games on 'Poveglia'. This project merges my musical foundations with avant-garde foley design, crafting an immersive auditory landscape that pushes the boundaries of horror gaming.",
-        image: "/images/latest-news/joset-digital-presskit-2026-poveglia-videogame.webp",
-        steamUrl: "https://store.steampowered.com/app/2260450/Poveglia_The_Island_of_No_Return/?l=spanish"
+        title: "Karther Makes His Debut at Gordo's Event",
+        date: "2023",
+        description: "A milestone in the local scene, participating in one of the biggest events of the year alongside Gordo.",
+        tag: "Event",
+        detailedContent: "In 2023, Karther performed at Gordo's massive event, taking a major step in his growth within the scene. This large-scale presentation allowed his sound to reach brand new audiences and established his presence on major stages.",
+        soundcloudUrl: "https://soundcloud.com/kartherdj/karther-set-debut-cali-gordo-x-booth-alib-15-10-2023?si=267bc6bcd682401393788e9bc53b667d&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+        ctaText: "Listen to the Set on SoundCloud",
+        image: "/multimedia-karther/latest-news/Karther Makes His Debut at Gordo's Event.webp"
     },
     {
-        title: "Nostalgic Waters: 'Aquatic' Tribute",
-        date: "May 2024",
-        description: "Joset pays homage to David Wise's legendary 'Aquatic Ambiance' from the Donkey Kong OST. His new track 'Aquatic' is a cinematic reimagining.",
-        tag: "Tribute",
-        detailedContent: "A cinematic love letter to the 16-bit era, 'Aquatic' reimagines David Wise’s legacy through a modern lens. By pairing vintage analogue synthesis with contemporary production standards, I’ve aimed to capture that elusive balance of serenity and mystery.",
-        spotifyUrl: "https://open.spotify.com/track/example"
-    },
-    {
-        title: "WinRar Reacts to 'Pay For Winrar'",
-        date: "16 May 2023",
-        description: "The developers behind the legendary software WinRAR have officially acknowledged Joset's track 'Pay For Winrar', a viral piece that playfully uses the iconic nag screen.",
-        tag: "Viral",
-        detailedContent: "This project stems from a nostalgic affinity for a brand that defined my early digital years. WinRAR's unique business model of persistent functionality alongside its iconic 'nag screen' inspired this viral tribute, recently garnering official recognition from the RARLAB team themselves.",
-        tweetUrl: "https://x.com/WinRAR_RARLAB/status/1658461779775635457?s=20"
+        title: "Karther Remixes the Legendary Classic '21 Questions'",
+        date: "Breakthrough",
+        description: "The remix that became a turning point in his national recognition.",
+        tag: "Release",
+        detailedContent: "Karther's remix of the legendary classic '21 Questions' skyrocketed his recognition across Colombia and opened new doors for his project. Its massive reception on the dancefloors proved the impact of his unique style and laid the groundwork for his subsequent industry moves.",
+        soundcloudUrl: "https://soundcloud.com/kartherdj/50-cent-21-questions-karther-edit-master",
+        ctaText: "Listen to the Remix on SoundCloud",
+        image: "/multimedia-karther/latest-news/Karther Remixes the Legendary Classic '21 Questions'.webp"
     }
 ];
 
@@ -97,6 +90,10 @@ export function LatestNews() {
                                 </div>
                             </div>
 
+                            <h3 className="text-[15px] font-bold text-foreground leading-tight group-hover:text-accent transition-colors tracking-tight">
+                                {item.title}
+                            </h3>
+
                             {item.image && (
                                 <div className="group/img relative my-2 aspect-video w-full overflow-hidden rounded-lg border border-white/5 shadow-inner transition-all duration-500">
                                     <Image
@@ -109,10 +106,6 @@ export function LatestNews() {
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60" />
                                 </div>
                             )}
-
-                            <h3 className="text-[15px] font-bold text-foreground leading-tight group-hover:text-accent transition-colors tracking-tight">
-                                {item.title}
-                            </h3>
 
                             <p className="text-[11px] leading-relaxed text-muted-foreground/90 text-justify line-clamp-2 group-hover:line-clamp-none transition-all duration-500">
                                 {item.description}
@@ -179,7 +172,7 @@ export function LatestNews() {
                                                                     className="object-contain"
                                                                 />
                                                             </div>
-                                                            <span className="text-[10px] font-bold text-white uppercase tracking-tighter">Listen to the latest SNARE WARS episode</span>
+                                                            <span className="text-[10px] font-bold text-white uppercase tracking-tighter">{('ctaText' in item) ? item.ctaText : 'Listen on SoundCloud'}</span>
                                                         </div>
                                                         <ExternalLink className="h-3 w-3 text-[#FF5500] opacity-50 group-hover/cta:opacity-100 transition-opacity" />
                                                     </a>
