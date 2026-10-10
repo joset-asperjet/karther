@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { LottieFirma } from './lottie-firma';
 
-// Fotos reales de /multimedia-karther/hero-photos (1.avif a 11.avif)
+// Fotos reales de /multimedia-karther/hero-photos (1.avif a 15.avif)
 const heroPhotos = [
   { src: '/multimedia-karther/hero-photos/1.avif', alt: 'Hero Photo 1' },
   { src: '/multimedia-karther/hero-photos/2.avif', alt: 'Hero Photo 2' },
@@ -16,12 +16,16 @@ const heroPhotos = [
   { src: '/multimedia-karther/hero-photos/9.avif', alt: 'Hero Photo 9' },
   { src: '/multimedia-karther/hero-photos/10.avif', alt: 'Hero Photo 10' },
   { src: '/multimedia-karther/hero-photos/11.avif', alt: 'Hero Photo 11' },
+  { src: '/multimedia-karther/hero-photos/12.avif', alt: 'Hero Photo 12' },
+  { src: '/multimedia-karther/hero-photos/13.avif', alt: 'Hero Photo 13' },
+  { src: '/multimedia-karther/hero-photos/14.avif', alt: 'Hero Photo 14' },
+  { src: '/multimedia-karther/hero-photos/15.avif', alt: 'Hero Photo 15' },
 ];
 
-const row1 = [heroPhotos[0], heroPhotos[1], heroPhotos[2], heroPhotos[3], heroPhotos[4], heroPhotos[5]];
-const row2 = [heroPhotos[6], heroPhotos[7], heroPhotos[8], heroPhotos[9], heroPhotos[10], heroPhotos[0]];
-const row3 = [heroPhotos[2], heroPhotos[4], heroPhotos[6], heroPhotos[8], heroPhotos[10], heroPhotos[1]];
-const row4 = [heroPhotos[3], heroPhotos[5], heroPhotos[7], heroPhotos[9], heroPhotos[0], heroPhotos[10]];
+const row1 = [heroPhotos[0], heroPhotos[1], heroPhotos[2], heroPhotos[3], heroPhotos[4], heroPhotos[5], heroPhotos[6]];
+const row2 = [heroPhotos[7], heroPhotos[8], heroPhotos[9], heroPhotos[10], heroPhotos[11], heroPhotos[12], heroPhotos[13]];
+const row3 = [heroPhotos[14], heroPhotos[0], heroPhotos[2], heroPhotos[4], heroPhotos[6], heroPhotos[8], heroPhotos[10]];
+const row4 = [heroPhotos[1], heroPhotos[3], heroPhotos[5], heroPhotos[7], heroPhotos[9], heroPhotos[11], heroPhotos[13]];
 
 interface ImageCardProps {
   src: string;
