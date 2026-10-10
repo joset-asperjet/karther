@@ -2,12 +2,13 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { Camera, AlertCircle, X, Download, ChevronDown } from 'lucide-react';
+import { Camera, AlertCircle, X, Download, ChevronDown, Video } from 'lucide-react';
 
 interface GalleryItem {
     src: string;
     downloadUrl?: string;
     label: string;
+    isVideo?: boolean;
 }
 
 const mainPressGallery: GalleryItem[] = [
@@ -60,13 +61,33 @@ const bwGallery: GalleryItem[] = [
         label: "Performance Photo 01",
     },
     {
+        src: "/multimedia-karther/photos/performance/karther-presskit-photo-performance-03lq.webp",
+        downloadUrl: "/multimedia-karther/photos/performance/karther-presskit-photo-performance-03hq.PNG",
+        label: "Performance Photo 02",
+    },
+    {
+        src: "/multimedia-karther/photos/performance/karther-presskit-photo-performance-04lq.webp",
+        downloadUrl: "/multimedia-karther/photos/performance/karther-presskit-photo-performance-04hq.PNG",
+        label: "Performance Photo 03",
+    },
+    {
+        src: "/multimedia-karther/photos/performance/karther-presskit-photo-performance-05lq.webp",
+        downloadUrl: "/multimedia-karther/photos/performance/karther-presskit-photo-performance-05hq.PNG",
+        label: "Performance Photo 04",
+    },
+    {
+        src: "/multimedia-karther/photos/performance/karther-presskit-photo-performance-06lq.webp",
+        downloadUrl: "/multimedia-karther/photos/performance/karther-presskit-photo-performance-06hq.PNG",
+        label: "Performance Photo 05",
+    },
+    {
         src: "/multimedia-karther/photos/performance/karther-presskit-photo-lq10.webp",
         downloadUrl: "/multimedia-karther/photos/performance/karther-presskit-photo-10hq.png",
-        label: "Performance Photo 02",
+        label: "Performance Photo 06",
     },
 ];
 
-const logoGallery: GalleryItem[] = [
+const brandingGallery: GalleryItem[] = [
     {
         src: "/multimedia-karther/logo/logo-karther-white-letters.png",
         downloadUrl: "/multimedia-karther/logo/logo-karther-white-letters.png",
@@ -77,9 +98,6 @@ const logoGallery: GalleryItem[] = [
         downloadUrl: "/multimedia-karther/logo/logo-karther-black-letters.png",
         label: "Karther Logo Black",
     },
-];
-
-const agencyGallery: GalleryItem[] = [
     {
         src: "/multimedia-karther/logo/logo-booth.png",
         downloadUrl: "/multimedia-karther/logo/logo-booth.png",
@@ -89,6 +107,27 @@ const agencyGallery: GalleryItem[] = [
         src: "/multimedia-karther/logo/logo-dance-different.png",
         downloadUrl: "/multimedia-karther/logo/logo-dance-different.png",
         label: "Dance Different Logo",
+    },
+];
+
+const videoGallery: GalleryItem[] = [
+    {
+        src: "/multimedia-karther/photos/videos/karther-dj-presskit-video01hq.MP4",
+        downloadUrl: "/multimedia-karther/photos/videos/karther-dj-presskit-video01hq.MP4",
+        label: "Press Video 01",
+        isVideo: true,
+    },
+    {
+        src: "/multimedia-karther/photos/videos/karther-dj-presskit-video02lq.mp4",
+        downloadUrl: "/multimedia-karther/photos/videos/karther-dj-presskit-video02lq.mp4",
+        label: "Press Video 02",
+        isVideo: true,
+    },
+    {
+        src: "/multimedia-karther/photos/videos/karther-dj-presskit-video03lq.mp4",
+        downloadUrl: "/multimedia-karther/photos/videos/karther-dj-presskit-video03lq.mp4",
+        label: "Press Video 03",
+        isVideo: true,
     },
 ];
 
@@ -102,38 +141,38 @@ const assets = [
     },
     {
         src: bwGallery[0].src,
-        alt: "Artist Portrait (BW)",
+        alt: "Artist Portrait (Performance)",
         label: "Performance Photos",
         isGallery: true,
         galleryType: 'bw' as const,
     },
     {
-        src: logoGallery[0].src,
-        alt: "Karther Logo",
-        label: "Primary Logo",
+        src: brandingGallery[0].src,
+        alt: "Karther & Agency Logos",
+        label: "Logos & Branding",
         isGallery: true,
-        galleryType: 'logo' as const,
+        galleryType: 'branding' as const,
         isLogo: true,
     },
     {
-        src: agencyGallery[0].src,
-        alt: "Agency Logo Assets",
-        label: "Agency Logo",
+        src: videoGallery[0].src,
+        alt: "Karther Live Videos",
+        label: "Videos",
         isGallery: true,
-        galleryType: 'agency' as const,
-        isLogo: true,
+        galleryType: 'videos' as const,
+        isVideo: true,
     },
 ];
 
 export function PhotographyBranding() {
-    const [activeGallery, setActiveGallery] = useState<'main' | 'bw' | 'logo' | 'agency' | null>(null);
+    const [activeGallery, setActiveGallery] = useState<'main' | 'bw' | 'branding' | 'videos' | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const galleries = {
         main: mainPressGallery,
         bw: bwGallery,
-        logo: logoGallery,
-        agency: agencyGallery,
+        branding: brandingGallery,
+        videos: videoGallery,
     };
 
     const currentGallery = activeGallery ? galleries[activeGallery] : [];
@@ -172,36 +211,67 @@ export function PhotographyBranding() {
                             >
                                 {galleries[asset.galleryType as keyof typeof galleries].length > 2 && (
                                     <div className={`absolute inset-0 translate-x-3 -translate-y-3 overflow-hidden rounded border border-border bg-card transition-transform duration-300 group-hover:translate-x-4 group-hover:-translate-y-4 ${asset.isLogo ? 'bg-white/5' : ''}`}>
-                                        <Image
-                                            src={galleries[asset.galleryType as keyof typeof galleries][2].src}
-                                            alt="Stack Background"
-                                            fill
-                                            className={`opacity-40 ${asset.isLogo ? 'object-contain p-4' : 'object-cover'}`}
-                                        />
+                                        {asset.isVideo ? (
+                                            <div className="h-full w-full bg-black/60 flex items-center justify-center opacity-40">
+                                                <Video className="h-8 w-8 text-white/40" />
+                                            </div>
+                                        ) : (
+                                            <Image
+                                                src={galleries[asset.galleryType as keyof typeof galleries][2].src}
+                                                alt="Stack Background"
+                                                fill
+                                                className={`opacity-40 ${asset.isLogo ? 'object-contain p-4' : 'object-cover'}`}
+                                            />
+                                        )}
                                     </div>
                                 )}
                                 {galleries[asset.galleryType as keyof typeof galleries].length > 1 && (
                                     <div className={`absolute inset-0 translate-x-1.5 -translate-y-1.5 overflow-hidden rounded border border-border bg-card transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 ${asset.isLogo ? 'bg-white/5' : ''}`}>
-                                        <Image
-                                            src={galleries[asset.galleryType as keyof typeof galleries][1].src}
-                                            alt="Stack Background"
-                                            fill
-                                            className={`opacity-60 ${asset.isLogo ? 'object-contain p-4' : 'object-cover'}`}
-                                        />
+                                        {asset.isVideo ? (
+                                            <div className="h-full w-full bg-black/50 flex items-center justify-center opacity-60">
+                                                <Video className="h-8 w-8 text-white/50" />
+                                            </div>
+                                        ) : (
+                                            <Image
+                                                src={galleries[asset.galleryType as keyof typeof galleries][1].src}
+                                                alt="Stack Background"
+                                                fill
+                                                className={`opacity-60 ${asset.isLogo ? 'object-contain p-4' : 'object-cover'}`}
+                                            />
+                                        )}
                                     </div>
                                 )}
 
                                 <div className={`relative h-full w-full overflow-hidden rounded border border-border bg-card transition-all duration-300 group-hover:border-accent shadow-xl ${asset.isLogo ? 'bg-white/5' : ''}`}>
-                                    <Image
-                                        src={asset.src}
-                                        alt={asset.alt}
-                                        fill
-                                        className={`${asset.isLogo ? 'object-contain p-4' : 'object-cover'}`}
-                                    />
-                                    <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                    {asset.isVideo ? (
+                                        <div className="relative h-full w-full bg-black">
+                                            <video
+                                                src={asset.src}
+                                                muted
+                                                playsInline
+                                                loop
+                                                autoPlay
+                                                className="h-full w-full object-cover"
+                                            />
+                                        </div>
+                                    ) : (
+                                        <Image
+                                            src={asset.src}
+                                            alt={asset.alt}
+                                            fill
+                                            className={`${asset.isLogo ? 'object-contain p-4' : 'object-cover'}`}
+                                        />
+                                    )}
+                                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                                         <div className="flex flex-col items-center gap-2">
-                                            <Camera className="h-6 w-6 text-white" />
-                                            <span className="text-[8px] font-bold uppercase tracking-tighter text-white">View Gallery</span>
+                                            {asset.isVideo ? (
+                                                <Video className="h-6 w-6 text-white" />
+                                            ) : (
+                                                <Camera className="h-6 w-6 text-white" />
+                                            )}
+                                            <span className="text-[8px] font-bold uppercase tracking-tighter text-white">
+                                                {asset.isVideo ? 'Watch Videos' : 'View Gallery'}
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -218,7 +288,6 @@ export function PhotographyBranding() {
                                     fill
                                     className={`${asset.isLogo ? 'object-contain p-4' : 'object-cover'}`}
                                 />
-                                {/* Download Overlay with Arrow */}
                                 <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-all duration-300 group-hover/asset:opacity-100">
                                     <div className="flex translate-y-2 flex-col items-center gap-1.5 transition-transform duration-300 group-hover/asset:translate-y-0">
                                         <div className="rounded-full bg-accent p-2 shadow-lg">
@@ -248,13 +317,20 @@ export function PhotographyBranding() {
                             <X className="h-6 w-6 text-foreground" />
                         </button>
 
-                        {/* Title & Download for active image */}
+                        {/* Title & Download for active image/video */}
                         <div className="z-10 flex w-full items-center justify-between md:mb-4">
                             <div>
                                 <h3 className="text-xs font-bold uppercase tracking-widest text-foreground">
-                                    {activeGallery === 'bw' ? 'LIVE ' : (activeGallery === 'logo' || activeGallery === 'agency') ? 'BRANDING ' : ''}{currentGallery[currentIndex].label}
+                                    {activeGallery === 'bw' ? 'LIVE ' : activeGallery === 'branding' ? 'BRANDING ' : activeGallery === 'videos' ? 'VIDEO ' : ''}
+                                    {currentGallery[currentIndex].label}
                                 </h3>
-                                <p className="text-[10px] text-muted-foreground uppercase mt-1 tracking-tighter">{(activeGallery === 'logo' || activeGallery === 'agency') ? 'Logo Assets 2026' : 'Photography Collection 2026'}</p>
+                                <p className="text-[10px] text-muted-foreground uppercase mt-1 tracking-tighter">
+                                    {activeGallery === 'branding'
+                                        ? 'Logo & Brand Assets 2026'
+                                        : activeGallery === 'videos'
+                                            ? 'Video Reel Collection 2026'
+                                            : 'Photography Collection 2026'}
+                                </p>
                             </div>
                             <a
                                 href={`${currentGallery[currentIndex].downloadUrl || currentGallery[currentIndex].src}`}
@@ -283,32 +359,55 @@ export function PhotographyBranding() {
                                 <ChevronDown className="h-6 w-6 -rotate-90 text-foreground" />
                             </button>
 
-                            {/* Main Image */}
-                            <div className="relative h-full w-full max-w-3xl animate-in zoom-in-95 duration-500">
-                                <Image
-                                    src={currentGallery[currentIndex].src}
-                                    alt={currentGallery[currentIndex].label}
-                                    fill
-                                    className={`${(activeGallery === 'logo' || activeGallery === 'agency') ? 'object-contain p-12' : 'object-contain'} select-none`}
-                                    priority
-                                />
+                            {/* Main Asset (Image or Video) */}
+                            <div className="relative h-full w-full max-w-3xl flex items-center justify-center animate-in zoom-in-95 duration-500">
+                                {currentGallery[currentIndex].isVideo ? (
+                                    <video
+                                        key={currentGallery[currentIndex].src}
+                                        src={currentGallery[currentIndex].src}
+                                        controls
+                                        autoPlay
+                                        playsInline
+                                        className="max-h-[75vh] w-auto max-w-full rounded-lg shadow-2xl object-contain bg-black"
+                                    />
+                                ) : (
+                                    <Image
+                                        src={currentGallery[currentIndex].src}
+                                        alt={currentGallery[currentIndex].label}
+                                        fill
+                                        className={`${activeGallery === 'branding' ? 'object-contain p-12' : 'object-contain'} select-none`}
+                                        priority
+                                    />
+                                )}
                             </div>
                         </div>
 
-                        {/* Thumbnail Strip (Several photos at the same time) */}
+                        {/* Thumbnail Strip */}
                         <div className="mt-4 flex w-full justify-center gap-4 overflow-x-auto pb-4 scrollbar-hide">
-                            {currentGallery.map((img, idx) => (
+                            {currentGallery.map((item, idx) => (
                                 <button
                                     key={idx}
                                     onClick={() => setCurrentIndex(idx)}
                                     className={`relative h-16 w-16 flex-shrink-0 overflow-hidden rounded border-2 transition-all duration-300 ${currentIndex === idx ? 'border-accent scale-110 shadow-lg shadow-accent/20' : 'border-white/10 opacity-50 hover:opacity-100'}`}
                                 >
-                                    <Image
-                                        src={img.src}
-                                        alt={img.label}
-                                        fill
-                                        className={`${(activeGallery === 'logo' || activeGallery === 'agency') ? 'object-contain p-2' : 'object-cover'}`}
-                                    />
+                                    {item.isVideo ? (
+                                        <div className="relative h-full w-full bg-black flex items-center justify-center">
+                                            <video
+                                                src={item.src}
+                                                muted
+                                                playsInline
+                                                className="h-full w-full object-cover opacity-60"
+                                            />
+                                            <Video className="absolute h-4 w-4 text-white" />
+                                        </div>
+                                    ) : (
+                                        <Image
+                                            src={item.src}
+                                            alt={item.label}
+                                            fill
+                                            className={`${activeGallery === 'branding' ? 'object-contain p-2' : 'object-cover'}`}
+                                        />
+                                    )}
                                 </button>
                             ))}
                         </div>

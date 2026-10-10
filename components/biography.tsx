@@ -75,29 +75,29 @@ export function Biography() {
             {lang === 'es' ? (
               <>
                 <p className="text-sm leading-relaxed text-white/90 text-justify">
-                  En 2023 comenzó a ganar reconocimiento dentro de la escena electrónica colombiana gracias a su remix de “21 Questions” de 50 Cent, track que impulsó su crecimiento y le permitió compartir escenario junto a Gordo en Cali junto a Booth Rec. En 2025 fue nominado a los Premios CDA como “Mejor Productor Revelación” de Colombia y ha compartido tarima junto a artistas internacionales como Classmatic, Rafa Barrios, WAFF y Sergio Saffe, además de realizar presentaciones en B2B junto a Koleto.
+                  KARTHER es un artista en ascenso dentro de la escena electrónica colombiana, con una propuesta sonora marcada por la energía del dancefloor, la cultura underground y una identidad street propia. En 2023, su carrera recibió un impulso importante gracias a su remix de “21 Questions” de 50 Cent, que contribuyó a ampliar su reconocimiento dentro de la escena.
                 </p>
 
                 <p className="text-sm leading-relaxed text-white/90 text-justify">
-                  Su música ha sido lanzada en sellos como Harvibal, Booth Rec, High Quality, Nuloud, Magic Beatz Records, entre otros, además de recibir support en clubes y festivales por parte de artistas como Harvy Valencia, Tony Guerra, Oscar G, Koleto, Ramón Bedoya, Sortech, Moreno & Prieto, Jonathan Jaramillo y Víctor Vergara, con quien además ha desarrollado colaboraciones musicales oficiales. Sus producciones también han sido descargadas por artistas internacionales como Marco Carola, Paco Osuna, Cloonee, Fisher y Gordo, llevando su música a escenarios y clubes de países como España, México, Argentina, Chile, Venezuela, Ecuador y Colombia, además de espacios icónicos como Space Miami. Además, su track inédito “Gomela” ha comenzado a generar expectativa dentro de la escena electrónica gracias al support internacional de Harvy Valencia incluso antes de su lanzamiento oficial.
+                  En 2025, fue nominado en la categoría “Mejor Productor Revelación” de los Premios CDA de Colombia. A lo largo de su trayectoria, KARTHER ha compartido escenario con artistas internacionales como GORDO, Classmatic, Rafa Barrios, WAFF y Sergio Saffe, además de realizar presentaciones B2B junto a Koleto. Su catálogo incluye lanzamientos en sellos como Booth Rec, Harvibal, High Quality, Nuloud, Stiker Music y demás, así como colaboraciones musicales oficiales con artistas como Víctor Vergara.
                 </p>
 
                 <p className="text-sm leading-relaxed text-white/90 text-justify">
-                  Actualmente, Karther continúa consolidando una propuesta artística auténtica, enfocada en conectar la energía del dancefloor con la esencia underground y street de la vieja escuela.
+                  Sus producciones han recibido el support de referentes de la escena como Harvy Valencia, Tony Guerra, Moreno & Prieto, Oscar G, Koleto, Ramón Bedoya, Sortech y Jonathan Jaramillo. Asimismo, sus tracks han sido descargados por artistas internacionales de la talla de Marco Carola, Paco Osuna, Cloonee, Fisher y GORDO, retumbando en la reconocida fiesta global Taraka y en clubes insignia a nivel mundial como Club Space (Miami) y Lost Beach Club (Ecuador). De esta forma, su música continúa ampliando su alcance y conectando con circuitos de países como España, México, Argentina, Chile, Ecuador, Venezuela y Colombia.
                 </p>
               </>
             ) : (
               <>
                 <p className="text-sm leading-relaxed text-white/90 text-justify">
-                  In 2023, he began gaining widespread recognition within the Colombian electronic music scene thanks to his remix of 50 Cent’s “21 Questions”, a track that boosted his growth and allowed him to share the stage with Gordo in Cali alongside Booth Rec. In 2025, he was nominated at the CDA Awards as Colombia’s “Best Breakthrough Producer” and has shared stages with international heavyweights like Classmatic, Rafa Barrios, WAFF, and Sergio Saffe, in addition to performing B2B sets with Koleto.
+                  KARTHER is a rising artist within the Colombian electronic music scene, defined by a sonic identity rooted in dancefloor energy, underground culture, and an authentic street aesthetic. In 2023, his career gained significant momentum thanks to his remix of 50 Cent’s “21 Questions”, which played a key role in expanding his recognition across the scene.
                 </p>
 
                 <p className="text-sm leading-relaxed text-white/90 text-justify">
-                  His music has been released on renowned record labels such as Harvibal, Booth Rec, High Quality, Nuloud, Magic Beatz Records, and more, while receiving heavy club and festival support from artists like Harvy Valencia, Tony Guerra, Oscar G, Koleto, Ramón Bedoya, Sortech, Moreno & Prieto, Jonathan Jaramillo, and Víctor Vergara, with whom he has also produced official collaborations. His productions have also been charted and downloaded by global icons such as Marco Carola, Paco Osuna, Cloonee, Fisher, and Gordo, carrying his sound to stages across Spain, Mexico, Argentina, Chile, Venezuela, Ecuador, and Colombia, as well as legendary venues like Space Miami. Furthermore, his unreleased weapon “Gomela” has sparked major anticipation across the circuit with international support from Harvy Valencia ahead of its official release.
+                  In 2025, he was nominated for “Best Breakthrough Producer” at the CDA Awards in Colombia. Throughout his career, KARTHER has shared stages with international heavyweights such as GORDO, Classmatic, Rafa Barrios, WAFF, and Sergio Saffe, in addition to delivering memorable B2B performances alongside Koleto. His discography spans releases on respected labels including Booth Rec, Harvibal, High Quality, Nuloud, Stiker Music, and more, as well as official collaborations with artists like Víctor Vergara.
                 </p>
 
                 <p className="text-sm leading-relaxed text-white/90 text-justify">
-                  Currently, Karther continues consolidating an authentic artistic vision, dedicated to connecting the raw energy of the dancefloor with the underground and street roots of the golden era.
+                  His productions have received continuous support from leading scene figures such as Harvy Valencia, Tony Guerra, Moreno & Prieto, Oscar G, Koleto, Ramón Bedoya, Sortech, and Jonathan Jaramillo. His tracks have also been downloaded and championed by global icons including Marco Carola, Paco Osuna, Cloonee, Fisher, and GORDO, reverberating at premier global parties like Taraka and landmark venues worldwide such as Club Space (Miami) and Lost Beach Club (Ecuador). As a result, his music continues to expand its reach, connecting with audiences across Spain, Mexico, Argentina, Chile, Ecuador, Venezuela, and Colombia.
                 </p>
               </>
             )}

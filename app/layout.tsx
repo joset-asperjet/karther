@@ -15,14 +15,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://karthermusic.info"),
   title: "KARTHER | Digital Presskit 2026",
-  description: "Karther construye desde la pista. Con grooves percusivos y una marcada estética inspirada en la cultura rap, hip hop y street de los 90 y 2000.",
+  description: "KARTHER es un artista en ascenso dentro de la escena electrónica colombiana, con una propuesta sonora marcada por la energía del dancefloor, la cultura underground y una identidad street propia.",
   openGraph: {
     type: "website",
-    url: "https://snarewarsradio.info/",
+    url: "https://karthermusic.info/",
     title: "KARTHER | Digital Presskit 2026",
-    description: "Karther construye desde la pista. Con grooves percusivos y una marcada estética inspirada en la cultura rap, hip hop y street de los 90 y 2000.",
-    images: ["/multimedia-karther/hero-photos/1.avif"],
+    description: "KARTHER es un artista en ascenso dentro de la escena electrónica colombiana, con una propuesta sonora marcada por la energía del dancefloor, la cultura underground y una identidad street propia.",
+    images: ["/opengraph.jpg"],
   },
   icons: {
     icon: "/icon.svg",

@@ -7,14 +7,15 @@ import { useAudioPlayer } from '@/context/audio-player-context';
 
 const tracks = [
   {
-    title: "Mi Flow",
-    artist: "Karther, Pavelz",
-    label: "Arawak Records",
-    date: "2026-10-12",
-    image: "/multimedia-karther/music/tracks-covers/mi-flow.webp",
-    audioUrl: "/multimedia-karther/music/karther - mi flow.mp3",
+    title: "Dexter",
+    artist: "Karther",
+    label: "Nebulozza Records",
+    date: "2026-09-18",
+    image: "/multimedia-karther/music/tracks-covers/dexter.webp",
+    audioUrl: "/multimedia-karther/music/Karther - Dexter (Original Mix) [Nebulozza Records] - Music & Downloads on Beatport.mp3",
     links: {
-      beatport: "https://www.beatport.com/es/track/mi-flow/30412692",
+      spotify: "https://open.spotify.com/intl-es/track/49lOlpA0FCXKt6xJMedZ8u",
+      beatport: "https://www.beatport.com/es/track/dexter/30287628",
     },
   },
   {
@@ -23,22 +24,21 @@ const tracks = [
     label: "Arawak Records",
     date: "2026-10-02",
     image: "/multimedia-karther/music/tracks-covers/enciendelo.webp",
-    audioUrl: "/multimedia-karther/music/Karther, Erick CZ - enciendelo.mp3",
+    audioUrl: "/multimedia-karther/music/Erick Cz, Karther - Enciendelo (Original Mix) [Arawak Records] - Music & Downloads on Beatport.mp3",
     links: {
       spotify: "https://open.spotify.com/intl-es/album/6Rpblef9yGf0wn98EhnVPS",
       apple: "https://music.apple.com/es/album/enciendelo-single/1891303104",
     },
   },
   {
-    title: "Dexter",
+    title: "Mamacita",
     artist: "Karther",
-    label: "Nebulozza Records",
-    date: "2026-09-18",
-    image: "/multimedia-karther/music/tracks-covers/dexter.webp",
-    audioUrl: "/multimedia-karther/music/karther - dexter.mp3",
+    label: "BOOTH",
+    date: "2026",
+    image: "/multimedia-karther/music/tracks-covers/mamacita.webp",
+    audioUrl: "/multimedia-karther/music/Karther - Mamacita (Original Mix) [BOOTH] - Music & Downloads on Beatport.mp3",
     links: {
-      spotify: "https://open.spotify.com/intl-es/track/49lOlpA0FCXKt6xJMedZ8u",
-      beatport: "https://www.beatport.com/es/track/dexter/30287628",
+      beatport: "https://www.beatport.com/es/artist/karther/1005477",
     },
   },
   {
@@ -47,64 +47,22 @@ const tracks = [
     label: "Supersonica Music",
     date: "2026-08-15",
     image: "/multimedia-karther/music/tracks-covers/no-body.webp",
-    audioUrl: "/multimedia-karther/music/karther - no body.mp3",
+    audioUrl: "/multimedia-karther/music/Cleyn, Karther - No Body EP [Supersonica Music] - Music & Downloads on Beatport.mp3",
     links: {
       spotify: "https://open.spotify.com/intl-es/track/1lEHBGGFB1YFAcdMtwlJdv",
       apple: "https://music.apple.com/es/album/no-body-ep-single/6793633085",
     },
   },
   {
-    title: "California",
-    artist: "Karther",
-    label: "Supersonica Music",
-    date: "2026-08-15",
-    image: "/multimedia-karther/music/tracks-covers/california.webp",
-    audioUrl: "/multimedia-karther/music/karther-california.mp3",
+    title: "Extacy",
+    artist: "Victor Vergara, Karther",
+    label: "Magic Beatz",
+    date: "2026",
+    image: "/multimedia-karther/music/tracks-covers/extacy.webp",
+    audioUrl: "/multimedia-karther/music/Victor Vergara, Karther - Extacy [Magic Beatz] - Music & Downloads on Beatport.mp3",
     links: {
-      spotify: "https://open.spotify.com/intl-es/track/0SR8TiD3H7RQ0V28GRmH9C",
-      apple: "https://music.apple.com/es/song/california/6793633088",
+      beatport: "https://www.beatport.com/es/artist/karther/1005477",
     },
-  },
-  {
-    title: "Zumbalo",
-    artist: "Karther, Salva (COL)",
-    label: "Aura Records Music",
-    date: "2026-08-10",
-    image: "/multimedia-karther/music/tracks-covers/zumbalo.webp",
-    audioUrl: "/multimedia-karther/music/karther - zumbalo.mp3",
-    links: {
-      beatport: "https://www.beatport.com/es/track/zumbalo/29210248",
-    },
-  },
-  {
-    title: "Vacilalo",
-    artist: "Karther, John Ortega",
-    label: "MangoTech Record",
-    date: "2026-06-13",
-    image: "/multimedia-karther/music/tracks-covers/vacilalo.webp",
-    audioUrl: "/multimedia-karther/music/karther - vacilalo.mp3",
-    links: {
-      apple: "https://music.apple.com/es/song/vaci-lalo/6776368254",
-    },
-  },
-  {
-    title: "Fek4",
-    artist: "Karther, John Ortega",
-    label: "MangoTech Record",
-    date: "2026-06-13",
-    image: "/multimedia-karther/music/tracks-covers/fek4.webp",
-    audioUrl: "/multimedia-karther/music/karther - fek4.mp3",
-    links: {
-      spotify: "https://open.spotify.com/intl-es/track/5dkYYrMTqch9QGrCGzuIoz",
-    },
-  },
-  {
-    title: "J4zZ",
-    artist: "David Figueira, Karther",
-    label: "Maya Room Records",
-    date: "2026-06-08",
-    image: "/multimedia-karther/music/tracks-covers/j4zz.webp",
-    audioUrl: "",
   },
 ];
 
@@ -118,10 +76,10 @@ export function Tracks() {
     <section className="border-t border-border px-4 py-12">
       <div className="mb-8">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-foreground">
-          Latest Tracks
+          Featured Tracks
         </h2>
         <p className="text-[10px] text-muted-foreground uppercase tracking-widest mt-1">
-          Selected Discography & Original Works
+          Signature Sound & Highlighted Releases
         </p>
       </div>
 
