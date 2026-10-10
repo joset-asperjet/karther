@@ -110,22 +110,24 @@ const brandingGallery: GalleryItem[] = [
     },
 ];
 
+const GOOGLE_DRIVE_VIDEOS_URL = "https://drive.google.com/drive/folders/1gbgBdXJ6LXq_PWTJ9vumtsU4RF38zybJ";
+
 const videoGallery: GalleryItem[] = [
     {
         src: "/multimedia-karther/photos/videos/karther-dj-presskit-video01hq.MP4",
-        downloadUrl: "/multimedia-karther/photos/videos/karther-dj-presskit-video01hq.MP4",
+        downloadUrl: GOOGLE_DRIVE_VIDEOS_URL,
         label: "Press Video 01",
         isVideo: true,
     },
     {
         src: "/multimedia-karther/photos/videos/karther-dj-presskit-video02lq.mp4",
-        downloadUrl: "/multimedia-karther/photos/videos/karther-dj-presskit-video02lq.mp4",
+        downloadUrl: GOOGLE_DRIVE_VIDEOS_URL,
         label: "Press Video 02",
         isVideo: true,
     },
     {
         src: "/multimedia-karther/photos/videos/karther-dj-presskit-video03lq.mp4",
-        downloadUrl: "/multimedia-karther/photos/videos/karther-dj-presskit-video03lq.mp4",
+        downloadUrl: GOOGLE_DRIVE_VIDEOS_URL,
         label: "Press Video 03",
         isVideo: true,
     },
@@ -332,14 +334,26 @@ export function PhotographyBranding() {
                                             : 'Photography Collection 2026'}
                                 </p>
                             </div>
-                            <a
-                                href={`${currentGallery[currentIndex].downloadUrl || currentGallery[currentIndex].src}`}
-                                download
-                                className="flex items-center gap-2 rounded-full bg-accent px-6 py-2.5 text-[10px] font-bold uppercase tracking-widest text-background transition-all hover:scale-105 active:scale-95 shadow-lg shadow-accent/20"
-                            >
-                                <Download className="h-3 w-3" />
-                                Download HI-RES
-                            </a>
+                            {currentGallery[currentIndex].downloadUrl?.startsWith('http') ? (
+                                <a
+                                    href={currentGallery[currentIndex].downloadUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 rounded-full bg-accent px-6 py-2.5 text-[10px] font-bold uppercase tracking-widest text-background transition-all hover:scale-105 active:scale-95 shadow-lg shadow-accent/20"
+                                >
+                                    <Download className="h-3 w-3" />
+                                    Download HQ (Drive)
+                                </a>
+                            ) : (
+                                <a
+                                    href={`${currentGallery[currentIndex].downloadUrl || currentGallery[currentIndex].src}`}
+                                    download
+                                    className="flex items-center gap-2 rounded-full bg-accent px-6 py-2.5 text-[10px] font-bold uppercase tracking-widest text-background transition-all hover:scale-105 active:scale-95 shadow-lg shadow-accent/20"
+                                >
+                                    <Download className="h-3 w-3" />
+                                    Download HI-RES
+                                </a>
+                            )}
                         </div>
 
                         {/* Main Viewer Area */}

@@ -7,6 +7,17 @@ import { useAudioPlayer } from '@/context/audio-player-context';
 
 const tracks = [
   {
+    title: "Scooby Doo",
+    artist: "Cleyn, Karther",
+    label: "Harvibal",
+    date: "2026",
+    image: "/multimedia-karther/music/tracks-covers/scooby doo.webp",
+    audioUrl: "/multimedia-karther/music/Cleyn, Karther - Scooby Doo (Original Mix) [Harvibal] - Music & Downloads on Beatport.mp3",
+    links: {
+      beatport: "https://www.beatport.com/es/artist/karther/1005477",
+    },
+  },
+  {
     title: "Dexter",
     artist: "Karther",
     label: "Nebulozza Records",
