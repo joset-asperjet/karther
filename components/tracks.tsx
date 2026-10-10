@@ -7,13 +7,15 @@ import { useAudioPlayer } from '@/context/audio-player-context';
 
 const tracks = [
   {
-    title: "Scooby Doo",
-    artist: "Cleyn, Karther",
-    label: "Harvibal",
-    date: "2026",
-    image: "/multimedia-karther/music/tracks-covers/scooby doo.webp",
-    audioUrl: "/multimedia-karther/music/Cleyn, Karther - Scooby Doo (Original Mix) [Harvibal] - Music & Downloads on Beatport.mp3",
+    title: "Enciendelo",
+    artist: "Erick Cz, Karther",
+    label: "Arawak Records",
+    date: "2026-10-02",
+    image: "/multimedia-karther/music/tracks-covers/enciendelo.webp",
+    audioUrl: "/multimedia-karther/music/Erick Cz, Karther - Enciendelo (Original Mix) [Arawak Records] - Music & Downloads on Beatport.mp3",
     links: {
+      spotify: "https://open.spotify.com/intl-es/album/6Rpblef9yGf0wn98EhnVPS",
+      apple: "https://music.apple.com/es/album/enciendelo-single/1891303104",
       beatport: "https://www.beatport.com/es/artist/karther/1005477",
     },
   },
@@ -30,29 +32,6 @@ const tracks = [
     },
   },
   {
-    title: "Enciendelo",
-    artist: "Erick Cz, Karther",
-    label: "Arawak Records",
-    date: "2026-10-02",
-    image: "/multimedia-karther/music/tracks-covers/enciendelo.webp",
-    audioUrl: "/multimedia-karther/music/Erick Cz, Karther - Enciendelo (Original Mix) [Arawak Records] - Music & Downloads on Beatport.mp3",
-    links: {
-      spotify: "https://open.spotify.com/intl-es/album/6Rpblef9yGf0wn98EhnVPS",
-      apple: "https://music.apple.com/es/album/enciendelo-single/1891303104",
-    },
-  },
-  {
-    title: "Mamacita",
-    artist: "Karther",
-    label: "BOOTH",
-    date: "2026",
-    image: "/multimedia-karther/music/tracks-covers/mamacita.webp",
-    audioUrl: "/multimedia-karther/music/Karther - Mamacita (Original Mix) [BOOTH] - Music & Downloads on Beatport.mp3",
-    links: {
-      beatport: "https://www.beatport.com/es/artist/karther/1005477",
-    },
-  },
-  {
     title: "No Body",
     artist: "Cleyn, Karther",
     label: "Supersonica Music",
@@ -62,15 +41,38 @@ const tracks = [
     links: {
       spotify: "https://open.spotify.com/intl-es/track/1lEHBGGFB1YFAcdMtwlJdv",
       apple: "https://music.apple.com/es/album/no-body-ep-single/6793633085",
+      beatport: "https://www.beatport.com/es/artist/karther/1005477",
+    },
+  },
+  {
+    title: "Scooby Doo",
+    artist: "Cleyn, Karther",
+    label: "Harvibal",
+    date: "2026-06-06",
+    image: "/multimedia-karther/music/tracks-covers/scooby doo.webp",
+    audioUrl: "/multimedia-karther/music/Cleyn, Karther - Scooby Doo (Original Mix) [Harvibal] - Music & Downloads on Beatport.mp3",
+    links: {
+      beatport: "https://www.beatport.com/es/artist/karther/1005477",
     },
   },
   {
     title: "Extacy",
     artist: "Victor Vergara, Karther",
     label: "Magic Beatz",
-    date: "2026",
+    date: "2026-03-09",
     image: "/multimedia-karther/music/tracks-covers/extacy.webp",
     audioUrl: "/multimedia-karther/music/Victor Vergara, Karther - Extacy [Magic Beatz] - Music & Downloads on Beatport.mp3",
+    links: {
+      beatport: "https://www.beatport.com/es/artist/karther/1005477",
+    },
+  },
+  {
+    title: "Mamacita",
+    artist: "Karther",
+    label: "BOOTH",
+    date: "2025-08-11",
+    image: "/multimedia-karther/music/tracks-covers/mamacita.webp",
+    audioUrl: "/multimedia-karther/music/Karther - Mamacita (Original Mix) [BOOTH] - Music & Downloads on Beatport.mp3",
     links: {
       beatport: "https://www.beatport.com/es/artist/karther/1005477",
     },
